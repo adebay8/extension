@@ -86,6 +86,6 @@ app.patch("/selling-groups", (req, res) => {});
 
 app.post("/selling-groups/products/:id", (req, res) => {});
 
-app.listen(9091, () => {
+app.listen(process.env.PORT || 9091, () => {
   console.log("server running");
 });
