@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx tsc",
+    "build": "tsc",
     "prestart": "npm run build",
     "start": "node dist/index.js -p $PORT",
     "start:dev": "ts-node-dev --respawn --transpile-only src/index.ts"
