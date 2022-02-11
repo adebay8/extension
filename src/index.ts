@@ -36,7 +36,6 @@ app.use(express.urlencoded({ extended: false }));
 
 app.get("/", async (req: Request, res: Response) => {
   // This shop hasn't been seen yet, go through OAuth to create a session
-  console.log(req);
   if (ACTIVE_SHOPIFY_SHOPS[SHOP] === undefined) {
     // not logged in, redirect to login
     res.redirect(`/login`);
