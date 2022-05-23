@@ -57,13 +57,6 @@ app.get("/login", async (req: Request, res: Response) => {
   return res.redirect(authRoute);
 });
 
-// app.get("/auth", (req: Request, res: Response) => {
-//   // console.log(res.header().getHeaders());
-//   return res.redirect(
-//     `https://${process.env.SHOP_NAME}.myshopify.com/admin/oauth/authorize?client_id=${process.env.SHOPIFY_API_KEY}&scope=${process.env.SCOPES}&redirect_uri=${process.env.HOST}/callback&state=stringstring&grant_options[]=value`
-//   );
-// });
-
 app.get("/auth/callback", async (req, res) => {
   try {
     const session = await Shopify.Auth.validateAuthCallback(
